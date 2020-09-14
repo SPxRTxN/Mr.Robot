@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(){
     char massage[27], ch;
@@ -7,7 +6,7 @@ int main(){
     printf("%s","massage: ");
     scanf("%s", massage);
     printf("%s", "input k1 and k2: ");
-    scanf("%d %d\n", &a, &b);
+    scanf("%d %d", &a, &b);
     for(i = 0; massage[i] != '\0'; ++i){
         ch = massage[i];
         ch = ((((ch - 'A')* a + b) % 26) + 'A');
