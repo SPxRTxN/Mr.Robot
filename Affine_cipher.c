@@ -5,30 +5,23 @@
 // функция щифрования F(x) = (a*x + b) % m
 
 int main(){
-
-
-    int a,b,i,j,len;
-
-    char sh, str, alf[i], shifr[i], ich[i], kod[i]; 
-
+    int a, b, i, j, len;
+    char sh, alf[27], shifr[27], massage[27]; 
     sh="abcdefghijklmnopqrstuvwxyz";
 
-    str="abc";
-
-    a=3; b=4;
-
+    printf("%s","massage: ");
+    scanf("%s", massage);
+    printf("%s", "input k1 and k2: ");
+    scanf("%d %d", &a, &b);
+    
     for (i=1; i < 27; i++)
-        alf[i]=sh.SubString(i,1);//разделение строки на символы
+        alf[i]=sh.SubString(i,1);
 
     for (j=1; j<25; ){
-        int f=(b+a*(j-1))/26;
-    shifr[j]=alf[b+1+a*(j-1)-26*f];
+        int f=(a *(j-1) +b ) /26;
+        shifr[j] = alf[b +1 +a *(j-1) -26 *f];
   }    
-    if(ich[i]==alf[j]){
-
-            kod[i]=shifr[j];
-            j++;
-            printf();//при a=3, b=4 abc=EHK
+   
     }
    }
   }
