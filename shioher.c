@@ -4,7 +4,7 @@ int main(){
     char massage[27], ch;
     int i, a, b, m;
     printf("%s","massage: ");
-    scanf("%s", massage);
+    scanf("%s", &massage);
     printf("%s", "input k1 and k2: ");
     scanf("%d %d", &a, &b);
     for(i = 0; massage[i] != '\0'; ++i){
