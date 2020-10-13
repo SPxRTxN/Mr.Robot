@@ -2,18 +2,18 @@
 #include <math.h>
 
 int main(){
-    char action;
+    char action, reaction;
     long long num1, num2, res, result[1024];
 
     do{
         for(int i = 1;; i++){
 
         printf("Input num1: ");
-        scanf("%lld\n", &num1);
-        printf("Input action: ");
-        scanf("%s\n", &action);
-        printf("Input num2 :");
-        scanf("%lld", &num2);
+        scanf("%lld", &num1);
+        printf("\nInput action: ");
+        scanf("%s", &action);
+        printf("\nInput num2: ");
+        scanf("%ld", &num2);
 
         if(action == 'r'){
             int s = 0;
@@ -22,15 +22,15 @@ int main(){
             if(s == 1){
                 num1 = result[i-1];
                 printf("Input action: ");
-                scanf("%s\n", &action);
-                printf("Input num2: ");
-                scanf("%lld\n", &num2);
+                scanf("%s", &action);
+                printf("\nInput num2: ");
+                scanf("%lld", &num2);
             }else{
                 num2 = result[i-1];
                 printf("Input num1: ");
-                scanf("%lld\n", &num1);
-                printf("Input action: ");
-                scanf("%s\n", &action);
+                scanf("%lld", &num1);
+                printf("\nInput action: ");
+                scanf("%s", &action);
                 
                 }
         }
@@ -67,10 +67,11 @@ int main(){
             result[i] = res;            
             break;
         }
-        }
         printf("Continue: (y/n)\n");
-        scanf("%s", &action);
-    }while(action != 'n');
+        scanf("%s", &reaction);
+        }
+        
+    }while(reaction != 'n');
     return 0;
 
 }
