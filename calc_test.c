@@ -2,14 +2,18 @@
 #include <math.h>
 
 int main(){
-    char action ;
+    char action;
     long long num1, num2, res, result[1024];
 
     do{
         for(int i = 1;; i++){
 
-        printf("Input num1, action, num2: ");
-        scanf("%lld%s%lld", &num1, &action, &num2);
+        printf("Input num1: ");
+        scanf("%lld\n", &num1);
+        printf("Input action: ");
+        scanf("%s\n", &action);
+        printf("Input num2 :");
+        scanf("%lld", &num2);
 
         if(action == 'r'){
             int s = 0;
@@ -17,12 +21,16 @@ int main(){
             scanf("%d", &s);
             if(s == 1){
                 num1 = result[i-1];
-                printf("Input action, num2: ");
-                scanf("%s%lld\n", &action, &num2);
+                printf("Input action: ");
+                scanf("%s\n", &action);
+                printf("Input num2: ");
+                scanf("%lld\n", &num2);
             }else{
                 num2 = result[i-1];
-                printf("Input num1, action: ");
-                scanf("%lld%s\n", &num1, &action);
+                printf("Input num1: ");
+                scanf("%lld\n", &num1);
+                printf("Input action: ");
+                scanf("%s\n", &action);
                 
                 }
         }
@@ -60,7 +68,9 @@ int main(){
             break;
         }
         }
-    }while(action != '0');
+        printf("Continue: (y/n)\n");
+        scanf("%s", &action);
+    }while(action != 'n');
     return 0;
 
 }
