@@ -6,8 +6,7 @@ int main(){
     long long num1, num2, res, result[1024];
 
     do{
-        for(int i = 1;; i++){
-
+        int i = 0;
         printf("Input num1: ");
         scanf("%lld", &num1);
         printf("\nInput action: ");
@@ -69,7 +68,7 @@ int main(){
         }
         printf("Continue: (y/n)\n");
         scanf("%s", &reaction);
-        }
+        i++;
         
     }while(reaction != 'n');
     return 0;
